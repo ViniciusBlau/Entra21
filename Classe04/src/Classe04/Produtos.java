@@ -26,6 +26,17 @@ public class Produtos {
 	double precoUnitario;
 	double desconto;
 	
+	
+	
+	public Produtos(String nomeProduto, String descricao, double precoUnitario, double desconto) {
+		this.nomeProduto = nomeProduto;
+		this.descricao = descricao;
+		this.precoUnitario = precoUnitario;
+		this.desconto = desconto;
+	}
+
+
+
 	public String imprimirInformacoes() {
 		return "Produto: " + nomeProduto + " - Descrição: " + descricao + " - Preço unitário: " +
 				precoUnitario + " - Desconto: " + desconto;
