@@ -11,8 +11,11 @@ public class Pessoa {
 	 */
 	
 	String nome;
-	String sexo;
+	char sexo;
 	String dataDeNascimento;
 	String estadoCivil;
 	
+	public String imprimirTudo() {
+		return " " + nome + " - " + sexo + " - " + dataDeNascimento + " - " + estadoCivil;  
+	}
 }
