@@ -22,23 +22,11 @@ public class Principal {
 		 * 
 		 */
 		
-		Produtos produto1 = new Produtos();
-		produto1.nomeProduto = "Caderno";
-		produto1.descricao = "Caderno em espiral tamanho médio";
-		produto1.precoUnitario = 4.50;
-		produto1.desconto = 15;
+		Produtos produto1 = new Produtos("Caderno", "Caderno em espiral tamanho médio", 4.50, 15);
 		
-		Produtos produto2 = new Produtos();
-		produto2.nomeProduto = "Caneta ESF";
-		produto2.descricao = "Caneta esferográfica 5mm";
-		produto2.precoUnitario = 1.20;
-		produto2.desconto = 2;
+		Produtos produto2 = new Produtos("Caneta ESF", "Caneta esferográfica 5mm", 1.20, 2);
 		
-		Produtos produto3 = new Produtos();
-		produto3.nomeProduto = "Esquadro";
-		produto3.descricao = "Esquadro de acrílico 20 cm";
-		produto3.precoUnitario = 2.35;
-		produto3.desconto = 10;
+		Produtos produto3 = new Produtos("Esquadro", "Esquadro de acrílico 20 cm", 2.35, 10);
 		
 		System.out.println(produto1.imprimirInformacoes());
 		System.out.println(produto2.imprimirInformacoes());
