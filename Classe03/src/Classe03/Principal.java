@@ -34,5 +34,9 @@ public class Principal {
 		unidadeDeFlorianopolis.nmrLaranjasVenAno = 1200;
 		unidadeDeFlorianopolis.precoLaranjas = 5;
 		
+		System.out.println(unidadeDeBlumenau.imprimirResultados());
+		System.out.println(unidadeDeJoinville.imprimirResultados());
+		System.out.println(unidadeDeFlorianopolis.imprimirResultados());
+		
 	}
 }
