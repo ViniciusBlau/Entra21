@@ -12,30 +12,24 @@ public class Principal {
 		 * Crie 2 objetos de Pessoa.
 		 */
 
-		Pessoa pessoa = new Pessoa();
+		Pessoa p1 = new Pessoa();
 
-		pessoa.nome = "LéoCharada";
-		pessoa.sexo = "F";
-		pessoa.dataDeNascimento = "11/08/04";
-		pessoa.estadoCivil = "Abandonado";
+		p1.nome = "LéoCharada";
+		p1.sexo = 'F';
+		p1.dataDeNascimento = "11/08/04";
+		p1.estadoCivil = "Abandonado";
 		
-		System.out.println("Nome: " + pessoa.nome);
-		System.out.println("Sexo: " + pessoa.sexo);
-		System.out.println("Data de nascimento: " + pessoa.dataDeNascimento);
-		System.out.println("Estado civil: " + pessoa.estadoCivil);
+		System.out.println(p1.imprimirTudo());
 		
 		
-		Pessoa pessoa2 = new Pessoa();
+		Pessoa p2 = new Pessoa();
 		
-		pessoa2.nome = "Blau";
-		pessoa2.sexo = "M";
-		pessoa2.dataDeNascimento = "02/04/05";
-		pessoa2.estadoCivil = "Namorando";
+		p2.nome = "Blau";
+		p2.sexo = 'M';
+		p2.dataDeNascimento = "02/04/05";
+		p2.estadoCivil = "Namorando";
 		
-		System.out.println("Nome: " + pessoa2.nome);
-		System.out.println("Sexo: " + pessoa2.sexo);
-		System.out.println("Data de nascimento: " + pessoa2.dataDeNascimento);
-		System.out.println("Estado civil: " + pessoa2.estadoCivil);
+		System.out.println(p2.imprimirTudo());
 		
 		
 	}
