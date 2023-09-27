@@ -40,6 +40,10 @@ public class Principal {
 		produto3.precoUnitario = 2.35;
 		produto3.desconto = 10;
 		
+		System.out.println(produto1.imprimirInformacoes());
+		System.out.println(produto2.imprimirInformacoes());
+		System.out.println(produto3.imprimirInformacoes());
+		
 	}
 
 }
