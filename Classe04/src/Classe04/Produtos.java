@@ -26,4 +26,9 @@ public class Produtos {
 	double precoUnitario;
 	double desconto;
 	
+	public String imprimirInformacoes() {
+		return "Produto: " + nomeProduto + " - Descrição: " + descricao + " - Preço unitário: " +
+				precoUnitario + " - Desconto: " + desconto;
+	}
+	
 }
