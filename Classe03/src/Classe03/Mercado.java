@@ -18,4 +18,9 @@ public class Mercado {
 	int nmrLaranjasVenAno;
 	double precoLaranjas;
 	
+	public String imprimirResultados() {
+		return " " + nmrMacasVenAno + " maçãs - " + precoMacas + " reais - " + nmrLaranjasVenAno
+				+ " laranjas - " + precoLaranjas + " reais";
+	}
+	
 }
