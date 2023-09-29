@@ -1,4 +1,4 @@
-package exercicio;
+package Classe06;
 
 public class Principal {
 
@@ -63,6 +63,7 @@ public class Principal {
 		}
 		
 		for (int i = 0; i < vetor.length; i++) {
+			System.out.println(vetor[i].toString());
 			valorTotal += vetor[i].lucroTotal(); 
 		}
 
@@ -72,6 +73,7 @@ public class Principal {
 		System.out.println("A franquia que menos lucrou ao todo: " + menosLucro);
 		System.out.println("A franquia que ficou no meio: " + locMeio);
 		System.out.println("O lucro total das franquias: " + valorTotal);
+		
 
 	}
 
