@@ -1,4 +1,4 @@
-package exercicio;
+package Classe06;
 
 public class Mercado {
 
@@ -101,5 +101,11 @@ public class Mercado {
 	public double lucroTotal() {
 		return lucroMacas() + lucroLaranjas();
 	}
+	
+	@Override
+	public String toString() {
+		return "Locais: " + this.getLocalidade();
+	}
+	
 	
 }
