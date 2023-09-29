@@ -1,11 +1,9 @@
-package Classe06;
+package exercicio;
 
 public class Mercado {
 
 	/*
-	 * Utilizando a classe Mercado.
-	 * 
-	 * Atribua valores às variáveis da classe Mercado para cada um dos objetos de
+	 * tribua valores às variáveis da classe Mercado para cada um dos objetos de
 	 * Mercado.
 	 * 
 	 * Sendo que o preço de compra dos produtos foi igual em todos os mercados.
@@ -17,49 +15,46 @@ public class Mercado {
 	 * maior vendendo maçãs ou laranjas?
 	 */
 
-	private int qntMacas;
-	private double precoMacas;
+	private int qtdMacas;
+	private double valorMacas;
 	private int qtdLaranjas;
-	private double precoLaranjas;
+	private double valorLaranjas;
 	private String localidade;
-	
-	public Mercado(int qntMacas, double precoMacas, int qtdLaranjas, double precoLaranjas, String localidade) {
-		
-		this.qntMacas = qntMacas;
-		this.precoMacas = precoMacas;
-		this.qtdLaranjas = qtdLaranjas;
-		this.precoLaranjas = precoLaranjas;
-		this.localidade = localidade;
-		
+
+	public Mercado(int qtdMacas, double valorMacas, int qtdLaranjas, double valorLaranjas, String localidade) {
+		setQtdMacas(qtdMacas);
+		setValorMacas(valorMacas);
+		setQtdLaranjas(qtdLaranjas);
+		setValorLaranjas(valorLaranjas);
+		setLocalidade(localidade);
 	}
 
-	public int getQntMacas() {
-		return qntMacas;
+	public double getQtdMacas() {
+		return qtdMacas;
 	}
 
-	public void setQntMacas(int qntMacas) {
-		if (qntMacas < 0) {
+	public void setQtdMacas(int qtdMacas) {
+		if (qtdMacas < 0) {
 			System.out.println("Erro, sem maçãs.");
 		} else {
-			this.qntMacas = qntMacas;
+			this.qtdMacas = qtdMacas;
 		}
-
 	}
 
-	public double getPrecoMacas() {
-		return precoMacas;
+	public double getValorMacas() {
+		return valorMacas;
 	}
 
-	public void setPrecoMacas(double precoMacas) {
-		if (precoMacas < 0) {
-			System.out.println("Erro, maças sem preço.");
+	public void setValorMacas(double valorMacas) {
+		if (valorMacas < 0) {
+			System.out.println("Erro, maçãs sem valor.");
 		} else {
-			this.precoMacas = precoMacas;
-		}
+			this.valorMacas = valorMacas;
 
+		}
 	}
 
-	public int getQtdLaranjas() {
+	public double getQtdLaranjas() {
 		return qtdLaranjas;
 	}
 
@@ -71,15 +66,15 @@ public class Mercado {
 		}
 	}
 
-	public double getPrecoLaranjas() {
-		return precoLaranjas;
+	public double getValorLaranjas() {
+		return valorLaranjas;
 	}
 
-	public void setPrecoLaranjas(double precoLaranjas) {
-		if (precoLaranjas < 0) {
-			System.out.println("Erro, laranjas sem preço.");
+	public void setValorLaranjas(double valorLaranjas) {
+		if (valorLaranjas < 0) {
+			System.out.println("Erro, laranjas sem valor.");
 		}
-		this.precoLaranjas = precoLaranjas;
+		this.valorLaranjas = valorLaranjas;
 	}
 
 	public String getLocalidade() {
@@ -88,14 +83,23 @@ public class Mercado {
 
 	public void setLocalidade(String localidade) {
 		if (localidade.isBlank() || localidade.isEmpty() || localidade == null) {
-			System.out.println("Erro, localização inválida.");
+			System.out.println("Erro, nenhuma franquia adicionada.");
 		} else {
 			this.localidade = localidade;
+
 		}
 	}
 	
+	public double lucroMacas() {
+		return qtdMacas * valorMacas;
+	}
 	
+	public double lucroLaranjas() {
+		return qtdLaranjas * valorLaranjas;
+	}
 	
-	
+	public double lucroTotal() {
+		return lucroMacas() + lucroLaranjas();
+	}
 	
 }
