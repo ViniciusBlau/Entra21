@@ -98,7 +98,7 @@ public class ImpostoDeRenda {
 		} else if (this.getRendaAnual() > 25000 && this.getRendaAnual() <= 35000) {
 			return this.getRendaAnual() * 0.275;
 		} else {
-			return this.getRendaAnual() * 0.30;
+			return this.getRendaAnual() * 0.3;
 		}
 	}
 
