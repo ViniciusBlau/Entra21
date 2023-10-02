@@ -43,6 +43,7 @@ public class Principal {
 		double aux = 0;
 		
 		for (int i = 0; i < vetor.length; i++) {
+			aux += vetor[i].impostos();
 			if (vetor[i].impostos() > maior) {
 				maior = vetor[i].impostos();
 				nomeMaior = vetor[i].getNome();
@@ -51,7 +52,6 @@ public class Principal {
 				menor = vetor[i].impostos();
 				nomeMenor = vetor[i].getNome();
 			}
-			aux += vetor[i].impostos();
 		}
 		System.out.println("Mais paga impostos: " + nomeMaior + ", ele paga: " + maior);
 		System.out.println("Menos paga impostos: " + nomeMenor + ", ele paga: " + menor);
