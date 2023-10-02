@@ -81,25 +81,25 @@ public class ImpostoDeRenda {
 			this.rendaAnual = rendaAnual;
 		}
 	}
-	
-	/*Nível de Renda Anual Alíquota 0 a 4.000 0% 4.001 a 9.000 5,8% 9.001 a 25.000
+
+	/*
+	 * Nível de Renda Anual Alíquota 0 a 4.000 0% 4.001 a 9.000 5,8% 9.001 a 25.000
 	 * 15% 25.001 a 35.000 27,5% acima de 35.000 30%
 	 * 
 	 */
-	
+
 	public double impostos() {
-		if(rendaAnual <= 4000) {
-			return rendaAnual * 0;
-		} else if (rendaAnual > 4000 && rendaAnual <= 9000) {
-			return rendaAnual * 0.058;
-		} else if (rendaAnual >= 9000 && rendaAnual <= 25000) {
-			return rendaAnual * 0.15;
-		} else if (rendaAnual > 25000 && rendaAnual <= 35000) {
-			return rendaAnual * 0.275;
+		if (this.getRendaAnual() <= 4000) {
+			return 0;
+		} else if (this.getRendaAnual() > 4000 && this.getRendaAnual() <= 9000) {
+			return this.getRendaAnual() * 0.058;
+		} else if (this.getRendaAnual() > 9000 && this.getRendaAnual() <= 25000) {
+			return this.getRendaAnual() * 0.15;
+		} else if (this.getRendaAnual() > 25000 && this.getRendaAnual() <= 35000) {
+			return this.getRendaAnual() * 0.275;
 		} else {
-			return rendaAnual * 0.30;
+			return this.getRendaAnual() * 0.30;
 		}
 	}
-	
 
 }
