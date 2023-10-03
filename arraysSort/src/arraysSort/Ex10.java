@@ -18,16 +18,26 @@ public class Ex10 {
 
 		List<Integer> lista = new ArrayList<>();
 
-		int soma = 0;
+		double soma = 0;
 		
-		for (int i = 1; i < 4; i++) {
-			System.out.println("Digite o " + i + "º valor: ");
-			int valor = s.nextInt(); // ler o dado como um número inteiro
-			soma += valor;
-			lista.add(soma);
+		for (int i = 0; i < 6; i++) {
+			System.out.println("Digite o " + (i + 1) + "º valor: ");
+			int valores = s.nextInt();
+			lista.add(valores);
 		}
-		System.out.println(soma);
 		System.out.println(lista);
+		
+		for (int i = 0; i < lista.size(); i++) {
+			soma += lista.get(i);
+		}
+		
+		double conta = soma / lista.size();
+		
+		for (int i = 0; i < lista.size(); i++) {
+			if (lista.get(i) > conta) {
+				System.out.println(lista.get(i));
+			}
+		}
 		s.close();
 	}
 }
