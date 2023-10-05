@@ -18,18 +18,21 @@ public class Principal {
 		Empregados empregado03 = new Empregados(3, "Léo vizu", 3000);
 		
 		double maisSalario = Integer.MIN_VALUE;
+		Empregados empMaiorSalario = null;
 		
 		for (Empregados e : Empregados.listaEmpregados) {
 			
 			System.out.println(e.rendaAnual());
 			e.modificarSalario(0.30);
+			System.out.println("Salário com o aumento:" + e.getSalario());
 			
 			if (e.getSalario() > maisSalario) {
 				maisSalario = e.getSalario();
-				System.out.println(e.toString());
+				empMaiorSalario = e;
 			}
 			
 		}
+		System.out.println(empMaiorSalario.toString());
 	}
 
 }
