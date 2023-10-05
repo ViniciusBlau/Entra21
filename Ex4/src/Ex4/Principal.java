@@ -13,12 +13,23 @@ public class Principal {
 		 * do salário
 		 */
 		
-		Empregados empregado01 = new Empregados("Vinicius Blau", 9000);
-		Empregados empregado02 = new Empregados("Bruna Winter", 6000);
-		Empregados empregado03 = new Empregados("Léo vizu", 3000);
+		Empregados empregado01 = new Empregados(1, "Vinicius Blau", 9000);
+		Empregados empregado02 = new Empregados(2 , "Bruna Winter", 6000);
+		Empregados empregado03 = new Empregados(3, "Léo vizu", 3000);
 		
+		double maisSalario = Integer.MIN_VALUE;
 		
-		
+		for (Empregados e : Empregados.listaEmpregados) {
+			
+			System.out.println(e.rendaAnual());
+			e.modificarSalario(0.30);
+			
+			if (e.getSalario() > maisSalario) {
+				maisSalario = e.getSalario();
+				System.out.println(e.toString());
+			}
+			
+		}
 	}
 
 }
