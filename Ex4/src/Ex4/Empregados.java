@@ -16,15 +16,29 @@ public class Empregados {
 	 * 
 	 */
 	
+	private int id;
 	private String nomeSobrenome;
 	private double salario;
 	public static List<Empregados> listaEmpregados = new ArrayList<>();
 
-	public Empregados(String nomeSobrenome, double salario) {
-		this.nomeSobrenome = nomeSobrenome;
-		this.salario = salario;
+	public Empregados(int id, String nomeSobrenome, double salario) {
+		setId(id);
+		setNomeSobrenome(nomeSobrenome);;
+		setSalario(salario);
+		listaEmpregados.add(this);
 	}
-
+	
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		if (id < 1) {
+			System.out.println("Sem ID.");
+		} else {
+			this.id = id;
+		}
+	}
+	
 	public String getNomeSobrenome() {
 		return nomeSobrenome;
 	}
@@ -49,8 +63,8 @@ public class Empregados {
 		}
 	}
 	
-	public double rendaAnual() {
-		return this.salario * 12;
+	public String rendaAnual() {
+		return "Nome: " + this.nomeSobrenome + " - Salário anual: " + (this.salario * 12) + " ";
 	}
 	
 	public String imprimirNome() {
@@ -58,7 +72,13 @@ public class Empregados {
 	}
 	
 	public void modificarSalario(double salarioNovo) {
-		
+		this.setSalario((salario * salarioNovo) + this.salario);
+	}
+	
+	@Override
+	
+	public String toString() {
+		return "" + getNomeSobrenome() + " teve o maior salário anual: " + getSalario();
 	}
 	
 }
