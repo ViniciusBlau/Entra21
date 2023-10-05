@@ -34,8 +34,10 @@ public class OnibusEscolar {
 	}
 
 	public void setEstudantes(int estudantes) {
-		if (estudantes > 40) {
-			this.estudantes = 40;
+		if (estudantes == 0) {
+			this.estudantes = estudantes;
+		} else if (estudantes > 40) {
+			this.setEstudantes(40);
 		} else {
 			this.estudantes = estudantes;	
 		}
@@ -54,7 +56,11 @@ public class OnibusEscolar {
 	}
 	
 	public void removerAlunos(int dez) {
-		setEstudantes(this.estudantes - dez);
+		if (getEstudantes() == 0) {
+			this.estudantes = estudantes;
+		} else {
+			setEstudantes(this.estudantes - dez);	
+		}
 	}
 	
 	@Override
