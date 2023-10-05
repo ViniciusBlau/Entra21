@@ -58,6 +58,8 @@ public class OnibusEscolar {
 	public void removerAlunos(int dez) {
 		if (getEstudantes() == 0) {
 			this.estudantes = estudantes;
+		} else if (getEstudantes() == 40) {
+			this.estudantes = estudantes;
 		} else {
 			setEstudantes(this.estudantes - dez);	
 		}
