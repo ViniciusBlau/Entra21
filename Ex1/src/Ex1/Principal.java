@@ -21,21 +21,25 @@ public class Principal {
 		Retangulo r7 = new Retangulo(3, 8);
 		Retangulo r8 = new Retangulo(9, 9);
 		Retangulo r9 = new Retangulo(2, 2);
-		Retangulo r10 = new Retangulo(7, 3);
+		Retangulo r10 = new Retangulo(13, 7);
 		
 		double maiorArea = Integer.MIN_VALUE;
 		double maiorPerimetro = Integer.MIN_VALUE;
+		Retangulo retMaiorArea = null;
+		Retangulo retMaiorPerimetro = null;
 		
 		for (Retangulo r : Retangulo.listaRetangulo) {
 			if (r.perimetro() > maiorPerimetro) {
 				maiorPerimetro = r.perimetro();
+				retMaiorPerimetro = r;
 			}
 			if (r.area() > maiorArea) {
 				maiorArea = r.area();
+				retMaiorArea = r;
 			}
 		}
-		System.out.println("O retângulo com maior perímetro tem: " + maiorPerimetro);
-		System.out.println("O retângulo com maior área tem: " + maiorArea);
+		System.out.println("Maior perímetro: " + retMaiorPerimetro.toString());
+		System.out.println("Maior área: " + retMaiorArea.toString());
 	}
 
 }
