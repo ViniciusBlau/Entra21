@@ -28,7 +28,7 @@ public class Retangulo {
 		return altura;
 	}
 	public void setAltura(double altura) {
-		if (altura < 0) {
+		if (altura <= 0) {
 			System.out.println("Erro, sem altura");;
 		} else {
 			this.altura = altura;
@@ -55,7 +55,7 @@ public class Retangulo {
 	
 	@Override
 	public String toString() {
-		return "O perímetro do retângulo é " + perimetro() + " metros, e a area é " + area() + " metros.";
+		return "A altura do retângulo é " + getAltura() + " metros, e a largura é " + getLargura() + " metros.";
 	}
 
 }
