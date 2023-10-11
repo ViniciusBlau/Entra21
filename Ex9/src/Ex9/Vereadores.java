@@ -9,7 +9,6 @@ public class Vereadores {
 	private String partido;
 	private int qtdProjetosApresentados;
 	private int qtdProjetosAprovados;
-	private double indiceTrabalho;
 	public static List<Vereadores> listaVereadores = new ArrayList<>();
 
 	public Vereadores(String nome, String partido, int qtdProjetosApresentados, int qtdProjetosAprovados) {
@@ -17,7 +16,6 @@ public class Vereadores {
 		setPartido(partido);
 		setQtdProjetosApresentados(qtdProjetosApresentados);
 		setQtdProjetosAprovados(qtdProjetosAprovados);
-		setIndiceTrabalho();
 		listaVereadores.add(this);
 	}
 
@@ -62,22 +60,18 @@ public class Vereadores {
 	public void setQtdProjetosAprovados(int qtdProjetosAprovados) {
 		this.qtdProjetosAprovados = qtdProjetosAprovados;
 	}
-
-	public double getIndiceTrabalho() {
-		return indiceTrabalho;
-	}
-
-	public void setIndiceTrabalho() {
+	
+	public double indiceTrabalho() {
 		if (qtdProjetosApresentados >= 1 && qtdProjetosApresentados <= 5) {
-			this.indiceTrabalho = 0.80;
+			return 0.80;
 		} else if (qtdProjetosApresentados >= 6 && qtdProjetosApresentados <= 10) {
-			this.indiceTrabalho = 1.00;
+			return 1.00;
 		} else if (qtdProjetosApresentados >= 11 && qtdProjetosApresentados <= 17) {
-			this.indiceTrabalho = 1.08;
+			return 1.08;
 		} else if (qtdProjetosApresentados > 17) {
-			this.indiceTrabalho = 1.22;
+			return 1.22;
 		} else {
-			this.indiceTrabalho = 0.0;
+			return 0.0;
 		}
 	}
 
@@ -85,7 +79,7 @@ public class Vereadores {
 		if (qtdProjetosApresentados == 0) {
 			return 0;
 		} else {
-			return (qtdProjetosAprovados / (double) qtdProjetosApresentados) * indiceTrabalho;
+			return (qtdProjetosAprovados / (double) qtdProjetosApresentados) * indiceTrabalho();
 		}
 
 	}
