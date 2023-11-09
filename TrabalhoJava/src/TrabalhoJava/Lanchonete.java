@@ -45,17 +45,13 @@ public class Lanchonete extends Estabelecimento {
 	}
 
 	@Override
-	public boolean pagar() {
-		// TODO Auto-generated method stub
-		return false;
-	}
-
-	private String pagamento(boolean pagar) {
-		if (pagar == true) {
-			return "Pagamento concluído!";
+	public String pagar(boolean pago) {
+		if (pago) {
+			return "Pago";	
 		} else {
-			return "Pagamento inválido!";
+			return "Não Pago";
 		}
+		
 	}
 
 	@Override
