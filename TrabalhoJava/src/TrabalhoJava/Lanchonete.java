@@ -45,7 +45,7 @@ public class Lanchonete extends Estabelecimento {
 	}
 
 	@Override
-	public boolean saida() {
+	public boolean pagar() {
 		// TODO Auto-generated method stub
 		return false;
 	}
