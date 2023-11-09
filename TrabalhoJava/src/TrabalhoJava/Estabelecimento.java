@@ -20,8 +20,8 @@ public abstract class Estabelecimento {
 	}
 
 	public void setFormaPagamento(String formaPagamento) {
-		if (formaPagamento.equalsIgnoreCase("dinheiro") || formaPagamento.equalsIgnoreCase("crédito")
-				|| formaPagamento.equalsIgnoreCase("débito")) {
+		if (formaPagamento.equalsIgnoreCase("dinheiro") || formaPagamento.equalsIgnoreCase("cartão de crédito")
+				|| formaPagamento.equalsIgnoreCase("cartão de débito") || formaPagamento.equalsIgnoreCase("pix")) {
 			this.formaPagamento = formaPagamento;
 		} else {
 			throw new IllegalArgumentException("Forma de pagamento inválida!");
@@ -62,7 +62,7 @@ public abstract class Estabelecimento {
 		this.saidasEmergencia = saidasEmergencia;
 	}
 
-	public abstract boolean pagar();
+	public abstract String pagar(boolean pago);
 
 	@Override
 
