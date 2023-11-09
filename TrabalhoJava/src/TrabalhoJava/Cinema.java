@@ -1,8 +1,10 @@
 package TrabalhoJava;
 
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class Cinema extends Estabelecimento {
+	Scanner s = new Scanner(System.in);
 
 	private String filme;
 	private String genero;
@@ -45,34 +47,38 @@ public class Cinema extends Estabelecimento {
 
 	}
 
-	public void reserva(int assento) {
-		
-		boolean verificaAcento = false;
-		
-		for (int i = 0; i < assentos.size(); i++) {
-			if (assentos.get(i).equals(assento) || assento == 0) {
-				verificaAcento = true;
-				System.out.println("Assento já reservado!");
-				break;
-			}
-		}
-		if (verificaAcento == false) {
-			assentos.add(assento);
-			System.out.println("Assento reservado com sucesso!");
-		}
+	public void reservar(int qtdIngressos) {
+
+		for (int i = 0; i < qtdIngressos; i++) {
+	        System.out.println("Digite o assento que deseja reservar(1-30): ");
+	        int assento = s.nextInt();
+
+	        if (assento >= 1 && assento <= 30) {
+	            if (assentos.contains(assento)) {
+	                System.out.println("Assento já reservado!");
+	                i--;
+	            } else {
+	                assentos.add(assento);
+	                System.out.println("Assento " + assento + " reservado com sucesso!");
+	            }
+	        } else {
+	            System.out.println("Assento inválido!");
+	            i--;
+	        }
+	    }
 
 	}
 
 	@Override
-	public boolean saida() {
+	public boolean pagar() {
 		return true;
 	}
 
 	@Override
 
 	public String toString() {
-		return super.toString() + " - Filme: " + this.filme + " - Gênero: " + this.genero + " - Assentos: "
-				+ this.assentos;
+		return  "Filme: " + this.filme + " - Gênero: " + this.genero +
+				  " - Assentos: " + this.assentos;
 	}
 
 }
