@@ -62,7 +62,7 @@ public abstract class Estabelecimento {
 		this.saidasEmergencia = saidasEmergencia;
 	}
 
-	public abstract boolean saida();
+	public abstract boolean pagar();
 
 	@Override
 
