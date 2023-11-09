@@ -78,7 +78,54 @@ public class Principal {
 			
 		}
 		
-		Cinema cinema01 = new Cinema("dinheiro", endereco01, true, 1, nomeFilme, generoFilme);
+		System.out.println("  _______________________________");
+		System.out.println("  |                             |");
+		System.out.println("  |     Formas de pagamento     |");
+		System.out.println("  |_____________________________|");
+		System.out.println("  |                             |");
+		System.out.println("  |  1   Dinheiro               |");
+		System.out.println("  |  2   Cartão de Crédito      |");
+		System.out.println("  |  3   Cartão de Débito       |"); 
+		System.out.println("  |  4   Pix                    |");
+		System.out.println("  |                             |");
+		System.out.println("  |    R$16.00 cada ingresso    |");
+		System.out.println("  |_____________________________|"); 
+		System.out.println();
+		
+		System.out.println("Digite o número do seu método de pagamento: ");
+		int escolhaPagamento = entrada.nextInt();
+		
+		String formaPagamento = "";
+		
+		while (true) {
+			switch (escolhaPagamento) {
+			case 1:
+				formaPagamento = "Dinheiro";
+				break;
+			case 2:
+				formaPagamento = "Cartão de Crédito";
+				break;
+			case 3:
+				formaPagamento = "Cartão de Débito";
+				break;
+			case 4:
+				formaPagamento = "Pix";
+				break;
+			default:
+				System.out.println("Método de pagamento inválido!");
+			}
+			if (escolhaPagamento >=1 && escolhaPagamento <= 4) {
+				break;
+			}
+			
+			System.out.println("Erro! Tente novamente!");
+			System.out.println();
+			System.out.println("Digite seu método de pagamento: ");
+			escolhaPagamento = entrada.nextInt();
+			
+		}
+		
+		Cinema cinema01 = new Cinema(formaPagamento, endereco01, true, 1, nomeFilme, generoFilme);
 
 		System.out.println("Quantos ingressos deseja comprar? ");
 		int qtdIngressos = entrada.nextInt();
@@ -88,8 +135,28 @@ public class Principal {
 			System.out.println("Quantos ingressos deseja comprar? ");
 			qtdIngressos = entrada.nextInt();
 		}
-
 		
+		System.out.println("Deseja pagar a conta(1-Sim, 2-Não): ");
+		int pagar = entrada.nextInt();
+		
+		boolean pago = true;
+		
+		while(pagar != 1) {
+			switch (pagar) {
+			case 1:
+				pago = true;
+				break;
+			default:
+				System.out.println("Você deve pagar! Tente novamente!");
+			}
+			if (pagar == 1) {
+				break;
+			}
+			System.out.println("Deseja pagar a conta(1-Sim, 2-Não): ");
+			pagar = entrada.nextInt();
+		}
+		
+		cinema01.pagar(pago);
 		cinema01.reservar(qtdIngressos);
 		System.out.println(cinema01.toString());
 		
