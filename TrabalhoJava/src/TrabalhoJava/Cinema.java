@@ -50,35 +50,51 @@ public class Cinema extends Estabelecimento {
 	public void reservar(int qtdIngressos) {
 
 		for (int i = 0; i < qtdIngressos; i++) {
-	        System.out.println("Digite o assento que deseja reservar(1-30): ");
-	        int assento = s.nextInt();
+			System.out.println("Digite o assento que deseja reservar(1-30): ");
+			int assento = s.nextInt();
 
-	        if (assento >= 1 && assento <= 30) {
-	            if (assentos.contains(assento)) {
-	                System.out.println("Assento já reservado!");
-	                i--;
-	            } else {
-	                assentos.add(assento);
-	                System.out.println("Assento " + assento + " reservado com sucesso!");
-	            }
-	        } else {
-	            System.out.println("Assento inválido!");
-	            i--;
-	        }
-	    }
+			if (assento >= 1 && assento <= 30) {
+				if (assentos.contains(assento)) {
+					System.out.println("Assento já reservado!");
+					i--;
+				} else {
+					assentos.add(assento);
+					System.out.println("Assento " + assento + " reservado com sucesso!");
+				}
+			} else {
+				System.out.println("Assento inválido!");
+				i--;
+			}
+		}
 
 	}
+	
+	public int totalPagar() {
+		
+		int totalAssentos = 0;
+
+        for (int a : assentos) {
+            totalAssentos += 1;
+        }
+
+        return totalAssentos * 16;	}
 
 	@Override
-	public boolean pagar() {
-		return true;
+	public String pagar(boolean pago) {
+		if (pago) {
+			return "Pago";	
+		} else {
+			return "Não Pago";
+		}
+		
 	}
 
 	@Override
 
 	public String toString() {
-		return  "Filme: " + this.filme + " - Gênero: " + this.genero +
-				  " - Assentos: " + this.assentos;
+		return "Filme: " + this.filme + " - Gênero: " + this.genero + " - Assentos: " + this.assentos
+				+ " - Forma de pagamento: " + getFormaPagamento() + " - Total a pagar: " + totalPagar() + " reais" + " - "
+						+ "Conta: " + pagar(true);
 	}
 
 }
