@@ -104,8 +104,8 @@ public class Lanchonete extends Estabelecimento {
     }
 
     @Override
-    public String pagar(boolean pago) {
-        if (pago) {
+    public String pagar(boolean pago2) {
+        if (pago2) {
         	return "Pago";
         } else {
         	return "Não pago";
