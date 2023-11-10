@@ -14,15 +14,15 @@ public class Principal {
 		System.out.println("  |      Filmes em Cartaz      |");
 		System.out.println("  |____________________________|");
 		System.out.println("  |                            |");
-		System.out.println("  |  1   Piratas do Caribe     |"); // ação
-		System.out.println("  |  2   Gente grande 2        |"); // comédia
-		System.out.println("  |  3   Titanic               |"); // drama
-		System.out.println("  |  4   Amor em redenção      |"); // romance
-		System.out.println("  |  5   Sorria                |"); // terror
-		System.out.println("  |  6   22 de Julho           |"); // documentário
-		System.out.println("  |  7   Nós                   |"); // suspense
-		System.out.println("  |  8   Interestelar          |"); // ficção científica
-		System.out.println("  |____________________________|"); //
+		System.out.println("  |  1   Piratas do Caribe     |");
+		System.out.println("  |  2   Gente grande 2        |");
+		System.out.println("  |  3   Titanic               |");
+		System.out.println("  |  4   Amor em redenção      |");
+		System.out.println("  |  5   Sorria                |");
+		System.out.println("  |  6   22 de Julho           |");
+		System.out.println("  |  7   Nós                   |");
+		System.out.println("  |  8   Interestelar          |");
+		System.out.println("  |____________________________|");
 		System.out.println();
 
 		System.out.println("Digite o número do filme de sua preferência: ");
@@ -76,6 +76,27 @@ public class Principal {
 			System.out.println("Digite o número do filme de sua preferência: ");
 			escolhaFilme = entrada.nextInt();
 
+		}
+		
+		System.out.println("Deseja pagar a conta(1-Sim, 2-Não): ");
+		int pagar = entrada.nextInt();
+
+		boolean pago = true;
+
+		while (pagar != 1) {
+			switch (pagar) {
+			case 1:
+				pago = true;
+				break;
+			default:
+				System.out.println("Você deve pagar! Tente novamente!");
+				System.out.println();
+			}
+			if (pagar == 1) {
+				break;
+			}
+			System.out.println("Deseja pagar a conta(1-Sim, 2-Não): ");
+			pagar = entrada.nextInt();
 		}
 
 		System.out.println("  _______________________________");
@@ -136,37 +157,41 @@ public class Principal {
 			qtdIngressos = entrada.nextInt();
 		}
 
-		System.out.println("Deseja pagar a conta(1-Sim, 2-Não): ");
-		int pagar = entrada.nextInt();
-
-		boolean pago = true;
-
-		while (pagar != 1) {
-			switch (pagar) {
-			case 1:
-				pago = true;
-				break;
-			default:
-				System.out.println("Você deve pagar! Tente novamente!");
-			}
-			if (pagar == 1) {
-				break;
-			}
-			System.out.println("Deseja pagar a conta(1-Sim, 2-Não): ");
-			pagar = entrada.nextInt();
-		}
+		
 
 		cinema01.pagar(pago);
 		cinema01.reservar(qtdIngressos);
 		System.out.println(cinema01.toString());
 
 		Lanchonete lanchonete01 = new Lanchonete(formaPagamento, endereco01, pago, 1, 4);
+		
 		System.out.println("  ________________________________________");
 		System.out.println("  |                                      |");
 		System.out.println("  |        BEM-VINDO À LANCHONETE!       |");
 		System.out.println("  |______________________________________|");
-		lanchonete01.comprar();;
+		lanchonete01.comprar();
 		System.out.println();
+		
+		System.out.println("Deseja pagar a conta(1-Sim, 2-Não): ");
+		int pagar02 = entrada.nextInt();
+
+		boolean pago02 = true;
+
+		while (pagar02 != 1) {
+			switch (pagar02) {
+			case 1:
+				pago02 = true;
+				break;
+			default:
+				System.out.println("Você deve pagar! Tente novamente!");
+				System.out.println();
+			}
+			if (pagar02 == 1) {
+				break;
+			}
+			System.out.println("Deseja pagar a conta(1-Sim, 2-Não): ");
+			pagar02 = entrada.nextInt();
+		}
 
 		System.out.println("  _______________________________");
 		System.out.println("  |                             |");
