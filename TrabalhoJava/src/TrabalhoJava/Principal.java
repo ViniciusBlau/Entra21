@@ -67,17 +67,17 @@ public class Principal {
 				break;
 			default:
 				System.out.println("Filme inválido!");
-				
+
 			}
-			
+
 			if (escolhaFilme >= 1 && escolhaFilme <= 8) {
-		        break;
-		    }
+				break;
+			}
 			System.out.println("Digite o número do filme de sua preferência: ");
 			escolhaFilme = entrada.nextInt();
-			
+
 		}
-		
+
 		System.out.println("  _______________________________");
 		System.out.println("  |                             |");
 		System.out.println("  |     Formas de pagamento     |");
@@ -85,18 +85,18 @@ public class Principal {
 		System.out.println("  |                             |");
 		System.out.println("  |  1   Dinheiro               |");
 		System.out.println("  |  2   Cartão de Crédito      |");
-		System.out.println("  |  3   Cartão de Débito       |"); 
+		System.out.println("  |  3   Cartão de Débito       |");
 		System.out.println("  |  4   Pix                    |");
 		System.out.println("  |                             |");
 		System.out.println("  |    R$16.00 cada ingresso    |");
-		System.out.println("  |_____________________________|"); 
+		System.out.println("  |_____________________________|");
 		System.out.println();
-		
+
 		System.out.println("Digite o número do seu método de pagamento: ");
 		int escolhaPagamento = entrada.nextInt();
-		
+
 		String formaPagamento = "";
-		
+
 		while (true) {
 			switch (escolhaPagamento) {
 			case 1:
@@ -114,17 +114,17 @@ public class Principal {
 			default:
 				System.out.println("Método de pagamento inválido!");
 			}
-			if (escolhaPagamento >=1 && escolhaPagamento <= 4) {
+			if (escolhaPagamento >= 1 && escolhaPagamento <= 4) {
 				break;
 			}
-			
+
 			System.out.println("Erro! Tente novamente!");
 			System.out.println();
 			System.out.println("Digite seu método de pagamento: ");
 			escolhaPagamento = entrada.nextInt();
-			
+
 		}
-		
+
 		Cinema cinema01 = new Cinema(formaPagamento, endereco01, true, 1, nomeFilme, generoFilme);
 
 		System.out.println("Quantos ingressos deseja comprar? ");
@@ -135,13 +135,13 @@ public class Principal {
 			System.out.println("Quantos ingressos deseja comprar? ");
 			qtdIngressos = entrada.nextInt();
 		}
-		
+
 		System.out.println("Deseja pagar a conta(1-Sim, 2-Não): ");
 		int pagar = entrada.nextInt();
-		
+
 		boolean pago = true;
-		
-		while(pagar != 1) {
+
+		while (pagar != 1) {
 			switch (pagar) {
 			case 1:
 				pago = true;
@@ -155,11 +155,64 @@ public class Principal {
 			System.out.println("Deseja pagar a conta(1-Sim, 2-Não): ");
 			pagar = entrada.nextInt();
 		}
-		
+
 		cinema01.pagar(pago);
 		cinema01.reservar(qtdIngressos);
 		System.out.println(cinema01.toString());
-		
+
+		Lanchonete lanchonete01 = new Lanchonete(formaPagamento, endereco01, pago, 1, 4);
+		System.out.println("  ________________________________________");
+		System.out.println("  |                                      |");
+		System.out.println("  |        BEM-VINDO À LANCHONETE!       |");
+		System.out.println("  |______________________________________|");
+		lanchonete01.comprar();;
+		System.out.println();
+
+		System.out.println("  _______________________________");
+		System.out.println("  |                             |");
+		System.out.println("  |     Formas de pagamento     |");
+		System.out.println("  |_____________________________|");
+		System.out.println("  |                             |");
+		System.out.println("  |  1   Dinheiro               |");
+		System.out.println("  |  2   Cartão de Crédito      |");
+		System.out.println("  |  3   Cartão de Débito       |");
+		System.out.println("  |  4   Pix                    |");
+		System.out.println("  |_____________________________|");
+		System.out.println();
+
+		System.out.println("Digite o número do seu método de pagamento: ");
+		int escolhaPagamento2 = entrada.nextInt();
+
+		while (true) {
+			switch (escolhaPagamento2) {
+			case 1:
+				lanchonete01.setFormaPagamento("Dinheiro");
+				break;
+			case 2:
+				lanchonete01.setFormaPagamento("Cartão de Crédito");
+				break;
+			case 3:
+				lanchonete01.setFormaPagamento("Cartão de Débito");
+				break;
+			case 4:
+				lanchonete01.setFormaPagamento("Pix");
+				break;
+			default:
+				System.out.println("Método de pagamento inválido!");
+			}
+			if (escolhaPagamento2 >= 1 && escolhaPagamento2 <= 4) {
+				break;
+			}
+
+			System.out.println("Erro! Tente novamente!");
+			System.out.println();
+			System.out.println("Digite seu método de pagamento: ");
+			escolhaPagamento2 = entrada.nextInt();
+
+		}
+		lanchonete01.pagar(pago);
+		System.out.println(lanchonete01.toString());
+
 		entrada.close();
 	}
 
