@@ -1,5 +1,6 @@
 package TrabalhoJava;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Lanchonete extends Estabelecimento {
@@ -41,46 +42,65 @@ public class Lanchonete extends Estabelecimento {
 		System.out.println("  |______________________________________|");
 
         double valorTotal = 0;
+        
+        ArrayList<String> alimentos = new ArrayList<>();
+    	ArrayList<Integer> quantidadeAlimentos = new ArrayList<>();
 
         while (true) {
+        	
             System.out.println("Digite o número do alimento ou bebida que você deseja comprar (0 para encerrar): ");
             int escolhaAlimento = entrada.nextInt();
-
+            
             if (escolhaAlimento == 0) {
                 break;
             }
 
-            System.out.println("Digite a quantidade: ");
+            System.out.println("Digite quantas unidades: ");
             int quantidadeAlimento = entrada.nextInt();
-
+            quantidadeAlimentos.add(quantidadeAlimento);
+            
+            
             switch (escolhaAlimento) {
                 case 1:
                     valorTotal += quantidadeAlimento * 10;
+                    alimentos.add("Pipoca Salgada");
                     break;
                 case 2:
                     valorTotal += quantidadeAlimento * 12;
+                    alimentos.add("Pipoca Doce");
                     break;
                 case 3:
                     valorTotal += quantidadeAlimento * 15;
+                    alimentos.add("Doritos");
                     break;
                 case 4:
                     valorTotal += quantidadeAlimento * 8;
+                    alimentos.add("Bib's");
                     break;
                 case 5:
                     valorTotal += quantidadeAlimento * 6;
+                    alimentos.add("Guaraná Antártica");
                     break;
                 case 6:
                     valorTotal += quantidadeAlimento * 6;
+                    alimentos.add("Coca-Cola");
                     break;
                 case 7:
                     valorTotal += quantidadeAlimento * 4;
+                    alimentos.add("Água mineral");
                     break;
                 default:
                     System.out.println("Número inválido!");
+                    int index = quantidadeAlimentos.size() - 1;
+                    quantidadeAlimentos.remove(index);
             }
         }
         this.valorTotal = valorTotal;
         System.out.println("Total a pagar: R$" + valorTotal);
+        System.out.println("Alimentos na cesta: ");
+        
+        System.out.println("Alimentos: " + alimentos);
+        System.out.println("Quantidade: " + quantidadeAlimentos);
     }
 
     @Override
