@@ -68,33 +68,35 @@ public class Cinema extends Estabelecimento {
 		}
 
 	}
-	
+
 	public int totalPagar() {
-		
+
 		int totalAssentos = 0;
 
-        for (int a : assentos) {
-            totalAssentos += 1;
-        }
+		for (int a : assentos) {
+			totalAssentos += 1;
+		}
+		totalAssentos = totalAssentos * 16;
 
-        return totalAssentos * 16;	}
+		return totalAssentos;
+	}
 
 	@Override
 	public String pagar(boolean pago) {
 		if (pago) {
-			return "Pago";	
+			return "Pago";
 		} else {
 			return "Não Pago";
 		}
-		
+
 	}
 
 	@Override
 
 	public String toString() {
 		return "Filme: " + this.filme + " - Gênero: " + this.genero + " - Assentos: " + this.assentos
-				+ " - Forma de pagamento: " + getFormaPagamento() + " - Total a pagar: " + totalPagar() + " reais" + " - "
-						+ "Conta: " + pagar(true);
+				+ " - Forma de pagamento: " + getFormaPagamento() + " - Total a pagar: " + totalPagar() + " reais"
+				+ " - " + "Conta: " + pagar(true);
 	}
 
 }
