@@ -68,6 +68,8 @@ public class Lanchonete extends Estabelecimento {
 				valorTotal += quantidadeAlimento * 8;
 				break;
 			case 5:
+				valorTotal += quantidadeAlimento * 6;
+				break;
 			case 6:
 				valorTotal += quantidadeAlimento * 6;
 				break;
