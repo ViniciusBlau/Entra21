@@ -1,0 +1,40 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.all {
+    margin-left: 35%;
+    margin-top: 100px;
+}
+
+tr:nth-child(even) {
+    background-color: #C0C0C0;
+}
+
+tr:first-child {
+    border: none;
+}
+
+tr:last-child {
+    background-color: red;
+}
+
+td {
+    text-align: center;
+}
+
+#line {
+    height: 1px;
+    width: 420px;
+    background-color: black;
+}
+
+#lit {
+    margin-left: 243px;
+}
+
+#end {
+    margin-left: 160px;
+}
+

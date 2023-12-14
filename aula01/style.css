@@ -1,0 +1,23 @@
+body {
+    background-color: bisque;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#pitch {
+    color: royalblue;
+    font-size: 17px;
+}
+
+#pitch02 {
+    color: red;
+    text-align: center;
+}
+
+#dov {
+    display: flex;
+    justify-content: center;
+}
+
+#fotoHacker {
+    width: 200px;
+}

@@ -1,0 +1,14 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: antiquewhite;
+    color: brown;
+}
+
+.lista {
+    margin-left: 23px;
+    color: blue;
+}

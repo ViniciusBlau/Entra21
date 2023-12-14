@@ -1,0 +1,69 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Hedvig Letters Serif', serif;
+}
+
+@keyframes changeColor {
+    0% { background-color: red; }
+    25% { background-color: blue; }
+    50% { background-color: green; }
+    75% { background-color: yellow; }
+    100% { background-color: purple; }
+  }
+
+.Card {
+    animation: changeColor 155ms infinite;
+    width: 300px;
+    margin-left: 40%;
+    margin-top: 80px;
+    border-radius: 15px;
+    height: 470px;
+    padding: 20px;
+    box-shadow: 5px 5px;
+    position: relative;
+}
+
+.info {
+    color: black;
+    margin-left: 40px;
+    text-align: left;
+}
+
+.titlle {
+    text-align: center;
+}
+
+#subtitlle {
+    font-size: 14px;
+}
+
+#fotoeu {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+}
+
+#link {
+    text-decoration: none;
+    color: gold;
+}
+
+
+@keyframes rotateAroundDiv {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  #movableImage {
+    width: 100px; /* Ajuste conforme necessário */
+    height: 100px; /* Ajuste conforme necessário */
+    position: absolute;
+    animation: rotateAroundDiv 5s linear infinite; /* Ajuste a duração conforme necessário */
+    transform-origin: center center; /* Define o ponto de rotação no centro da imagem */
+  }

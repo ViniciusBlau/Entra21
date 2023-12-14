@@ -1,0 +1,20 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#titulo {
+    color: whitesmoke;
+}
+
+table, th, td {
+    border: 1px solid black;
+}
+
+tr:nth-child(odd) {
+    background-color: salmon;
+}
+
+td {
+    background-color: greenyellow;
+}
