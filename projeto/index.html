@@ -6,35 +6,30 @@
     <link rel="stylesheet" href="style.css">
     <title>ProjetoCompras</title>
 </head>
-<body>
-    <div class="container-all">
-        <nav>
-            <div class="container-logo">
-                <img src="/images/logo.png" alt="logo">
-            </div>
-            <div class="container-opcoes">
-                <ul>
-                    <li>Sedans</li>
-                    <li>Esportivos</li>
-                    <li>Camionetes</li>
-                    <li>Acessórios
-                        <ul>
-                            <li>Peças</li>
-                            <li>Pinturas</li>
-                            <li>Limpezas</li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-            <div class="container-out">
-                
-            </div>
-        </nav>
-        <div class="container-all">
-            <div class="container-titulo">
-                <h1>Seja bem-vindo à Auto-Cars!</h1>
-            </div>
-        </div>
+<header class="container-header">
+    <div class="container-logo">
+        <img src="images/logo.png" alt="logo" width="70px">
     </div>
+    <nav class="nav-container">
+        <ul class="container-opcoes">
+            <li>Sedans</li>
+            <li>Esportivos</li>
+            <li>Camionetes</li>
+            <ul class="menu">
+                <li>Acessórios
+                    <ul>
+                        <li><a href="pecas.html">Peças</a></li>
+                        <li><a href="pinturas.html">Pintura</a></li>
+                        <li><a href="limpeza.html">Limpeza</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </ul>
+    </nav>
+    <div class="container-botoes">
+        <button class="botao1">LOGIN</button>
+        <button class="botao2">SAIR</button>
+    </div>
+</header>
 </body>
 </html>
