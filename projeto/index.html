@@ -4,32 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>ProjetoCompras</title>
+    <title>Document</title>
 </head>
-<header class="container-header">
-    <div class="container-logo">
-        <img src="images/logo.png" alt="logo" width="70px">
-    </div>
-    <nav class="nav-container">
-        <ul class="container-opcoes">
-            <li>Sedans</li>
-            <li>Esportivos</li>
-            <li>Camionetes</li>
-            <ul class="menu">
-                <li>Acessórios
-                    <ul>
-                        <li><a href="pecas.html">Peças</a></li>
-                        <li><a href="pinturas.html">Pintura</a></li>
-                        <li><a href="limpeza.html">Limpeza</a></li>
+<body>
+    <header>
+        <img class="logo" src="/images/logo.png" alt="logo">
+        <nav>
+            <ul class="nav_links">
+                <button class="botao">Olá</button>
+                <li><a href="#">Sedans</a></li>
+                <li><a href="#">Esportivos</a></li>
+                <li><a href="#">Camionetes</a></li>
+                <li class="has-dropdown">
+                    <a href="#">Acessórios</a>
+                    <ul class="dropdown">
+                        <li><a href="#">Pintura</a></li>
+                        <li><a href="#">Peças</a></li>
+                        <li><a href="#">Limpeza</a></li>
                     </ul>
                 </li>
             </ul>
-        </ul>
-    </nav>
-    <div class="container-botoes">
-        <button class="botao1">LOGIN</button>
-        <button class="botao2">SAIR</button>
-    </div>
-</header>
+        </nav>
+        <a class="cta" href="#"><button>Login</button></a>
+    </header>
 </body>
 </html>
