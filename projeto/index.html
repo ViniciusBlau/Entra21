@@ -1,31 +1,267 @@
+   */ <section>
+        <div class="car">
+            <h2>Carro 1</h2>
+            <p>Descrição do Carro 1...</p>
+            <p>Preço: R$XX,XXX</p>
+            <button>Ver Detalhes</button>
+        </div>
+
+        <div class="car">
+            <h2>Carro 2</h2>
+            <p>Descrição do Carro 2...</p>
+            <p>Preço: R$XX,XXX</p>
+            <button>Ver Detalhes</button>
+        </div>
+
+        <!-- Adicione mais carros conforme necessário -->
+
+    </section> /*
+
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <title>Seu Site de Venda de Automóveis</title>
+    <script src="https://kit.fontawesome.com/6cf904dbf5.js" crossorigin="anonymous"></script>
+    <style>
+        body {
+            font-family: Arial;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background: url(/images/flag.jpg);
+        }
+
+        header {
+            display: flex;
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .logo {
+            margin-right: 10px;
+            width: 70px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-around;
+            background-color: #444;
+            padding: 10px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: white;
+            text-transform: uppercase;
+        }
+
+        nav a:hover {
+            color: #2B59BD;
+            transition: .3s;
+        }
+
+        .tittle {
+            margin-top: 60px;
+            text-align: center;
+        }
+
+        .auto{
+            color: #2B59BD;
+            margin-bottom: 10px;
+            font-size: 80px;
+        }
+
+        .sub {
+            color:#2B59BD;
+            font-size: 30px;
+        }
+
+        .baloes {
+            color: white;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            gap: 50px;
+            align-items: center;
+            margin-top: 150px;
+            font-size: 30px;
+        }
+
+        .balao1 {
+            background-color: black;
+            border-radius: 30px;
+            padding: 1px 20px;
+        }
+
+        .balao1 h1{
+            background-color: black;
+            border-radius: 30px;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .balao2 {
+            background-color: black;
+            border-radius: 30px;
+            padding: 1px 20px;
+        }
+
+        .balao2 h1{
+            background-color: black;
+            border-radius: 30px;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .balao3 {
+            background-color: black;
+            border-radius: 30px;
+            padding: 1px 20px;
+        }
+
+        .balao3 h1{
+            background-color: black;
+            border-radius: 30px;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .envios {
+            margin-top: 150px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 20px;
+        }
+
+        .car {
+            flex: 1 1 300px;
+            margin: 10px;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .envios i.fa-truck-fast {
+            margin-left: 12px;
+            font-size: 36px; /* Ajuste o tamanho conforme necessário */
+        }
+
+        .submenu {
+            display: none;
+            position: absolute;
+            background-color: #444;
+            padding: 10px;
+            z-index: 1;
+        }
+
+        .nav-item:hover .submenu {
+            display: block;
+        }
+
+        .submenu a {
+            color: white;
+            text-decoration: none;
+            display: block;
+            padding: 5px 10px;
+        }
+
+        .submenu a:hover {
+            color: white;
+            background-color: #2B59BD;
+        }
+
+        @media (max-width: 858px) {
+        
+            .tittle {
+                margin-top: 2px;
+                text-align: center;
+            }
+
+            .auto{
+                font-size: 50px;
+            }
+
+            .sub {
+                font-size: 20px;
+            }
+
+            .baloes {
+                flex-direction: column;
+                margin-top: 60px;
+            }
+
+            .envios {
+                margin-top: 70px;
+            }
+        
+        }
+
+    </style>
 </head>
 <body>
+
     <header>
-        <img class="logo" src="/images/logo.png" alt="logo">
-        <nav>
-            <ul class="nav_links">
-                <button class="botao">Olá</button>
-                <li><a href="#">Sedans</a></li>
-                <li><a href="#">Esportivos</a></li>
-                <li><a href="#">Camionetes</a></li>
-                <li class="has-dropdown">
-                    <a href="#">Acessórios</a>
-                    <ul class="dropdown">
-                        <li><a href="#">Pintura</a></li>
-                        <li><a href="#">Peças</a></li>
-                        <li><a href="#">Limpeza</a></li>
-                    </ul>
-                </li>
-            </ul>
-        </nav>
-        <a class="cta" href="#"><button>Login</button></a>
+        <a href=""><img src="/images/logo.png" alt="logo" class="logo"></a>
+        <h1>Auto-Cars</h1>
     </header>
+
+    <nav>
+        <a href="#">Sedans</a>
+        <a href="#">Esportivos</a>
+        <div class="nav-item">
+            <a href="#">Acessórios</a>
+            <div class="submenu">
+                <a href="#">Peças</a>
+                <a href="#">Pintura</a>
+                <a href="#">Limpeza</a>
+            </div>
+        </div>
+        <a href="#">Login</a>
+    </nav>
+
+    <section>
+
+        <div class="tittle">
+            <h1 class="auto">Seja bem-vindo à Auto Cars!</h1>
+            <p class="sub">Seu site de compra e venda de Automóveis!</p>
+            <div class="baloes">
+                <div class="balao1"><h1>VENDA</h1></div>
+                <div class="balao2"><h1>COMPRE</h1></div>
+                <div class="balao3"><h1>TROQUE</h1></div>
+            </div>
+            <div class="envios">
+                <h1>Envios para todo o Brasil!</h1>
+                <i class="fa-solid fa-truck-fast"></i>
+            </div>
+        </div>
+
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Auto-Cars. Todos os direitos reservados.</p>
+    </footer>
+
 </body>
 </html>
+
